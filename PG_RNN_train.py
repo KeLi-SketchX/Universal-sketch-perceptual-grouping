@@ -1,18 +1,3 @@
-# Copyright 2017 Google Inc. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-"""SketchRNN training. encoder: BRNN  decoder: RNN"""
-
 
 import json
 import os
@@ -35,12 +20,6 @@ tf.logging.set_verbosity(tf.logging.INFO)
 
 FLAGS = tf.app.flags.FLAGS
 
-# tf.app.flags.DEFINE_string(
-#     'data_dir',
-#     '/import/vision-datasets/kl303/PG_data/svg_fine_tuning/Aug_data/',
-#     'The directory in which to find the dataset specified in model hparams. '
-#     'If data_dir starts with "http://" or "https://", the file will be fetched '
-#     'remotely.')
 
 tf.app.flags.DEFINE_string(
     'data_dir',
@@ -150,69 +129,13 @@ def load_dataset(data_dir, model_params, inference_mode=False):
     else:
       eval_strokes = np.concatenate((eval_strokes, eval_stroke))
 
-  #for dataset in all_datasets:
-   # if  dataset in test_datasets:
-  #    continue
-  #  with open(aug_data_dir+dataset+'/train.ndjson','r') as f:
-  #    train_stroke = json.load(f)
-
-  # for dataset in all_datasets:
-  #   if  dataset in test_datasets:
-  #     continue
-  #   with open(aug_data_dir+dataset+'/train.ndjson','r') as f:
-  #     train_data = json.load(f)
-  #     train_stroke = []
-  #     for ii in range(10):
-  #       b_offset = ii*650
-  #       end_offset = ii*650+650
-  #       if ii==0:
-  #         train_stroke = train_data[b_offset:end_offset]
-  #       else:
-  #         train_stroke=train_stroke+train_data[b_offset:end_offset]
-  #
-  #
-  #   with open(aug_data_dir + dataset + '/valid.ndjson', 'r') as f:
-  #     valid_stroke = json.load(f)
-  #
-  #   if train_strokes is None:
-  #     train_strokes = train_stroke
-  #   else:
-  #     train_strokes = np.concatenate((train_strokes,train_stroke))
-  #   if valid_strokes is None:
-  #     valid_strokes = valid_stroke
-  #   else:
-  #     valid_strokes = np.concatenate((valid_strokes, valid_stroke))
-  #
-  # test_data_dir = '/import/vision-datasets001/kl303/PG_data/PG_ndjson/fine_tuning1/'
-  # for dataset in all_datasets:
-  #   if dataset in test_datasets:
-  #     continue
-  #   with open(test_data_dir+dataset+'.ndjson','r') as f:
-  #     ori_data = json.load(f)
-  #     train_stroke = ori_data['train_data'][:650]
-  #     valid_stroke = ori_data['train_data'][650:700]
-  #     eval_stroke = ori_data['train_data'][700:]
-  #
-  #   if train_strokes is None:
-  #     train_strokes = train_stroke
-  #   else:
-  #     train_strokes = np.concatenate((train_strokes,train_stroke))
-  #   if valid_strokes is None:
-  #     valid_strokes = valid_stroke
-  #   else:
-  #     valid_strokes = np.concatenate((valid_strokes, valid_stroke))
-  #   if eval_strokes is None:
-  #     eval_strokes = eval_stroke
-  #   else:
-  #     eval_strokes = np.concatenate((eval_strokes, eval_stroke))
 
   all_strokes = np.concatenate((train_strokes, valid_strokes, eval_strokes))
   #all_strokes = train_strokes
   num_points = 0
   for stroke in all_strokes:
     num_points += len(stroke)
-  #avg_len = num_points / len(all_strokes)
-  #pdb.set_trace()
+
   # calculate the max strokes we need.
   max_seq_len = utils.get_max_len(all_strokes)
   # overwrite the hps with this calculation.
@@ -264,9 +187,6 @@ def load_dataset(data_dir, model_params, inference_mode=False):
 
   tf.logging.info('normalizing_scale_factor %4.4f.', normalizing_scale_factor)
 
-  # result = [
-  #     train_set, valid_set, test_set, model_params, eval_model_params,
-  #     sample_model_params]
 
   result = [train_set,valid_set,test_set, model_params, eval_model_params,sample_model_params]
   return result
