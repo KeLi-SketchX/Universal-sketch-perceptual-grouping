@@ -7,5 +7,7 @@ if you use this code, please cited
   booktitle={ECCV},
   year={2018},
 }
+You can also find the SketctX-PRIS dataset in another file.
+
 
 This framework is based on sketchrnn, so you should install magenta, see more detail in https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn
