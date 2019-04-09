@@ -1,0 +1,23 @@
+04-09 06:22 tensorflow   INFO     Restoring parameters from ./models/vector-5700
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN/fw/LSTMCell/W_xh:0 (5, 1024) 5120
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN/fw/LSTMCell/W_hh:0 (256, 1024) 262144
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN/fw/LSTMCell/bias:0 (1024,) 1024
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN/bw/LSTMCell/W_xh:0 (5, 1024) 5120
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN/bw/LSTMCell/W_hh:0 (256, 1024) 262144
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN/bw/LSTMCell/bias:0 (1024,) 1024
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN_mu/super_linear_w:0 (512, 128) 65536
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN_mu/super_linear_b:0 (128,) 128
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN_sigma/super_linear_w:0 (512, 128) 65536
+04-09 06:22 tensorflow   INFO     vector_rnn/ENC_RNN_sigma/super_linear_b:0 (128,) 128
+04-09 06:22 tensorflow   INFO     vector_rnn/linear/super_linear_w:0 (128, 1024) 131072
+04-09 06:22 tensorflow   INFO     vector_rnn/linear/super_linear_b:0 (1024,) 1024
+04-09 06:22 tensorflow   INFO     vector_rnn/Feat/feat_w:0 (512, 128) 65536
+04-09 06:22 tensorflow   INFO     vector_rnn/Feat/feat_b:0 (128,) 128
+04-09 06:22 tensorflow   INFO     vector_rnn/RNN/output_w:0 (512, 123) 62976
+04-09 06:22 tensorflow   INFO     vector_rnn/RNN/output_b:0 (123,) 123
+04-09 06:22 tensorflow   INFO     vector_rnn/RNN/LSTMCell/W_xh:0 (133, 2048) 272384
+04-09 06:22 tensorflow   INFO     vector_rnn/RNN/LSTMCell/W_hh:0 (512, 2048) 1048576
+04-09 06:22 tensorflow   INFO     vector_rnn/RNN/LSTMCell/bias:0 (2048,) 2048
+04-09 06:22 tensorflow   INFO     vector_rnn/logic/logic_w:0 (128, 2) 256
+04-09 06:22 tensorflow   INFO     vector_rnn/logic/logic_b:0 (2,) 2
+04-09 06:22 tensorflow   INFO     Total trainable variables 2252029.
