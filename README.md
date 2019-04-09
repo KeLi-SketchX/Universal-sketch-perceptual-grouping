@@ -15,9 +15,8 @@ https://github.com/KeLi-SketchX/SketchX-PRIS-Dataset
 This framework is based on sketchrnn, so you should install magenta, see more detail in https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn
 
 Our code contain 3 folds:
-(1) Sketch Perceptual grouper training and inference code--PG_RNN_train.py
-
+1. Item 1 Sketch Perceptual grouper training and inference code--PG_RNN_train.py
 If you want to retrain the model or get the affinity metrix \hat{G}, you can use this file.
-(2) The postprocess code of Sketch Perceptual grouping--/ECCV_JULE/test_PG_cluster.py
+1. Item 2 The postprocess code of Sketch Perceptual grouping--/ECCV_JULE/test_PG_cluster.py
 If you want to get the group, you can use those file.Note: Those file will inference and cluster the affinity metrix \hat{G}.
-(3) The Evaluation code, We use the benchmark in BSD500. We process our annotation data to get the GrourdTruth.
+1. Item 3 The Evaluation code, We use the benchmark in BSD500. We process our annotation data to get the GrourdTruth.
