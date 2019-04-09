@@ -16,6 +16,7 @@ This framework is based on sketchrnn, so you should install magenta, see more de
 
 Our code contain 3 folds:
 (1) Sketch Perceptual grouper training and inference code--PG_RNN_train.py
+
 If you want to retrain the model or get the affinity metrix \hat{G}, you can use this file.
 (2) The postprocess code of Sketch Perceptual grouping--/ECCV_JULE/test_PG_cluster.py
 If you want to get the group, you can use those file.Note: Those file will inference and cluster the affinity metrix \hat{G}.
