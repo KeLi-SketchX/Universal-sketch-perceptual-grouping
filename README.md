@@ -19,4 +19,4 @@ Our code contain 3 folds:
 If you want to retrain the model or get the affinity metrix \hat{G}, you can use this file.
 1. Item 2 The postprocess code of Sketch Perceptual grouping--/ECCV_JULE/test_PG_cluster.py
 If you want to get the group, you can use those file.Note: Those file will inference and cluster the affinity metrix \hat{G}.
-1. Item 3 The Evaluation code, We use the benchmark in BSD500. We process our annotation data to get the GrourdTruth.
+1. Item 3 The Evaluation code, We use the benchmark in BSDS500. We process our annotation data to get the GrourdTruth.
